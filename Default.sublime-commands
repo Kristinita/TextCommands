@@ -14,7 +14,7 @@
     {"caption":"TextCommands: Integer Sequence", "command":"integer_sequence"},
     {"caption":"TextCommands: Decimal To Hex", "command":"decimal_to_hex"},
     {"caption":"TextCommands: Hex To Decimal", "command":"hex_to_decimal"},
-    {"caption":"TextCommands: Increment Selection", "command":"increment_selection"},
+    {"caption":"TextCommands: Increment Selection", "command":"text_commands_increment_selection"},
     {"caption":"TextCommands: Decrement Selection", "command":"decrement_selection"},
     {"caption":"TextCommands: Selection Length", "command":"selection_length"},
     {"caption":"TextCommands: Sort Text", "command":"sort_text"},
