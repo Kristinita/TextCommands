@@ -38,13 +38,14 @@ except ImportError:
 
 
 class IntegerSequenceCommand(bases.PerIntegerTextCommand):
+
     def pre(self):
         super(IntegerSequenceCommand, self).pre()
         self.ind = 0
 
     def per_int(self, intval):
         self.ind += 1
-        return str(self.ind-1)
+        return str(self.ind - 1)
 
 """
     Converts selected hex numbers into decimal equivalents
@@ -52,6 +53,7 @@ class IntegerSequenceCommand(bases.PerIntegerTextCommand):
 
 
 class HexToDecimalCommand(bases.PerWordTextCommand):
+
     def per_word(self, text):
         try:
             int_val = int(text, base=16)
@@ -66,6 +68,7 @@ class HexToDecimalCommand(bases.PerWordTextCommand):
 
 
 class DecimalToHexCommand(bases.PerIntegerTextCommand):
+
     def per_int(self, num):
         return num_to_hex(num)
 
@@ -74,7 +77,8 @@ class DecimalToHexCommand(bases.PerIntegerTextCommand):
 """
 
 
-class IncrementSelectionCommand(bases.PerIntegerTextCommand):
+class TextCommandsIncrementSelectionCommand(bases.PerIntegerTextCommand):
+
     def per_int(self, num):
         num += 1
         return str(num)
@@ -85,6 +89,7 @@ class IncrementSelectionCommand(bases.PerIntegerTextCommand):
 
 
 class DecrementSelectionCommand(bases.PerIntegerTextCommand):
+
     def per_int(self, num):
         num -= 1
         return str(num)
